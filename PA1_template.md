@@ -24,7 +24,7 @@ library(ggplot2)
 qplot(T_steps, geom = "histogram", binwidth = 1000, xlab = "total number of steps taken each day")
 ```
 
-![plot of chunk histogram total steps](figure/histogram total steps-1.png) 
+![plot of chunk histogram_total_steps](figure/histogram_total_steps-1.png) 
 
 3. Calculate and report the mean and median of the total number of steps taken per day.
 
@@ -43,7 +43,7 @@ library(ggplot2)
 ggplot(data = Average_steps, aes(x = interval, y = steps)) + geom_line() + xlab("5-minute interval") + ylab("average number of steps taken") 
 ```
 
-![plot of chunk average daily activity](figure/average daily activity-1.png) 
+![plot of chunk average_daily_activity](figure/average_daily_activity-1.png) 
 
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -101,7 +101,7 @@ library(ggplot2)
 qplot(T_steps_revised, geom = "histogram", binwidth = 1000, xlab = "total number of steps taken each day")
 ```
 
-![plot of chunk histogram revised data](figure/histogram revised data-1.png) 
+![plot of chunk histogram_revised_data](figure/histogram_revised_data-1.png) 
 
 
 ```r
@@ -134,4 +134,4 @@ averages<- aggregate(steps ~ interval + day, data = data_revised, mean)
 ggplot(averages, aes(interval, steps)) + geom_line() + facet_grid(day ~ .) + xlab("5-minute interval") + ylab("Number of steps")
 ```
 
-![plot of chunk plot weekday weekend](figure/plot weekday weekend-1.png) 
+![plot of chunk plot_weekday_weekend](figure/plot_weekday_weekend-1.png) 
